@@ -1,7 +1,55 @@
 div {
-  animation: mymove 4s;
+  animation: newname;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: 2;
+  animation-delay: 2s;
 }
+
+div:hover{
+  animation-play-state: paused;
+}
+
 @keyframes mymove {
     from {left: 0px;} /* 0% */
     to {left: 200px;} /* 100% */
+}
+
+@keyframes newname {
+  0%  {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    left: 0px;
+    top: 200px;
+  }
+  100%{
+    left: 0px;
+    top: 0px;
+  }
+}
+
+#bounce-title {
+  position: absolute;
+  animation: twerk 1s infinite alternate ease;
+}
+@keyframes twerk {
+  0% {
+    bottom: 0px;
+    transform: scaleY(0.5);
+  }
+  100% {
+    bottom: 400px;
+    transform: scaleY(1.5);
+  }
 }
